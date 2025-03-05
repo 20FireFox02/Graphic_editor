@@ -14,7 +14,7 @@ class Ellipse_alg(Algoritm):
         pg.draw.rect(display,BLACK,(x*PIXEL,y*PIXEL,PIXEL,PIXEL))
         pg.draw.rect(display,BLACK,(x*PIXEL,(b_crd[1]-y+b_crd[1])*PIXEL,PIXEL,PIXEL))
         def deqz(x,y,delta):
-            return x+1,y-1,delta+(2*(x-b_crd[0])+1)*b**2+(2*(-y+b_crd[1])+1)*a**2
+            return x+1,y-1,delta+(2*(x-b_crd[0])+1)*b**2+(-2*(y-b_crd[1])+1)*a**2
         while y>lim:
             if delta<0:
                 d=2*delta+2*(y-b_crd[1])*a**2-1

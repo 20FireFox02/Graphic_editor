@@ -1,8 +1,7 @@
-from constant_module import *
+from constant_module import GRAY,DARK_GRAY
 
 from wind_init_module import pg,display
 
-#import wind_init_module as wi
 from var_module import menu_nums
 from menu_var_module import buttons,menus
 

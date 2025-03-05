@@ -7,7 +7,7 @@ class Giperb_alg(Algoritm):
         a=e_crd[0]-b_crd[0]
         if a != 0:
             b=e_crd[1]-b_crd[1]
-            lim=b_crd[0]+40
+            lim=e_crd[1]
             
             delta=b**2*(1+2*abs(a))-a**2
 
@@ -17,7 +17,7 @@ class Giperb_alg(Algoritm):
             pg.draw.rect(display,BLACK,((b_crd[0]-x+b_crd[0])*PIXEL,y*PIXEL,PIXEL,PIXEL))
             def deqz(x,y,delta):
                 return x+1,y+1,delta+(2*(x-b_crd[0])+1)*b**2-(2*(y-b_crd[1])+1)*a**2
-            while x<lim:
+            while y<lim:
                 if delta<0:
                     d=2*delta+2*(y-b_crd[1])*a**2+1
                     if d<=0:
