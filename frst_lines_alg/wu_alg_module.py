@@ -1,9 +1,9 @@
-import pygame as pg
-from constant_module import *
-from algoritm_class_module import Algoritm
+from wind_init_module import pg,display
+from constant_module import BLACK,PIXEL
+from classes.algoritm_module import Algoritm
 
 class Wu_alg(Algoritm):
-    def draw_line(display,b_crd,e_crd,check):
+    def draw_line(b_crd,e_crd,check):
         x,y=b_crd
         dx=e_crd[0]-x
         dy=e_crd[1]-y

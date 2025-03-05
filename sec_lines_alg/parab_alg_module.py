@@ -1,8 +1,9 @@
-import pygame as pg
-from constant_module import *
+from wind_init_module import pg,display
+from constant_module import BLACK,PIXEL
+from classes.algoritm_module import Algoritm
 
-class Parab_alg:
-    def draw_line(display,b_crd,e_crd,check):
+class Parab_alg(Algoritm):
+    def draw_line(b_crd,e_crd,check):
         b=e_crd[1]-b_crd[1]
         
         if b!=0:
@@ -10,12 +11,8 @@ class Parab_alg:
             lim=b_crd[1]+50
             if b>0:ty=-1
             else:ty=1
-        #pg.draw.rect(display,BLACK,(b_crd[0]*PIXEL,b_crd[1]*PIXEL,PIXEL,PIXEL))
-        #print(b_crd,e_crd)
 
             delta=a**2*(1+2*abs(b))-b**2
-        #print(delta)
-        #print([x,y])
             x=b_crd[0]
             y=b_crd[1]+abs(b)
             print(y,y-abs(b))
@@ -36,10 +33,7 @@ class Parab_alg:
                         delta=delta-b**2*(2*(x-b_crd[0])+1)
                     else:x,y,delta=deqz(x,y,delta)
                 else:x,y,delta=deqz(x,y,delta)
-            #print([x,y])
+                
                 pg.draw.rect(display,BLACK,(x*PIXEL,(b_crd[1]+b_crd[1]*ty-(y-abs(b))*ty)*PIXEL,PIXEL,PIXEL))
                 pg.draw.rect(display,BLACK,((b_crd[0]-x+b_crd[0])*PIXEL,(b_crd[1]+b_crd[1]*ty-(y-abs(b))*ty)*PIXEL,PIXEL,PIXEL))
-                #check
-
-#a=Brz_circle_alg
-#a.draw_line((0,0),(0,8))
+                check()

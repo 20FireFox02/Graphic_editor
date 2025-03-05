@@ -11,7 +11,7 @@ def draw_button(menu):
         pg.draw.rect(display,GRAY,[button.begin_crd[0],button.begin_crd[1],\
                                    button.size[0],button.size[1]])
 def draw_menu():
-    display.fill(WHITE)
+
     for menu_num in menu_nums:
         
         pg.draw.rect(display,DARK_GRAY,[menus[menu_num].begin_crd[0],menus[menu_num].begin_crd[1],\

@@ -1,5 +1,5 @@
-from button_module import Button
-from menu_module import Menu
+from classes.button_module import Button
+from classes.menu_module import Menu
 from button_funcs import *
 
 EQUPM_BUTTON_SIZE=(40,40)

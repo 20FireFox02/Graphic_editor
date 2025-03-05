@@ -1,13 +1,13 @@
-import pygame as pg
-from constant_module import *
+from wind_init_module import pg,display
+from constant_module import BLACK,PIXEL
+from classes.algoritm_module import Algoritm
 
-class Brz_circle_alg:
-    def draw_line(display,b_crd,e_crd,check):
+class Brz_circle_alg(Algoritm):
+    def draw_line(b_crd,e_crd,check):
         dx=e_crd[0]-b_crd[0]
         dy=e_crd[1]-b_crd[1]
         lim=b_crd[1]
         
-
         r=int((dx**2+dy**2)**0.5)
         delta=2-2*r
 
